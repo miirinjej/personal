@@ -1,0 +1,16 @@
+.DS_Store
+dist
+dist-ssr
+node_modules
+
+# local env files
+*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
