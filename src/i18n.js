@@ -24,6 +24,20 @@ async function loadLocaleMessages(i18n, locale, store) {
   return nextTick();
 }
 
+async function loadScopedLocaleMessages(i18n, locale, scope, store) {
+  try {
+    const messages = await import(`./locales/${scope}.${locale}.json`);
+
+    i18n.setLocaleMessage(locale, messages.default);
+  } catch (error) {
+    if (!isServer) {
+      await store.dispatch('errors/setError', error);
+    }
+  }
+
+  return nextTick();
+}
+
 function setI18nLanguage(i18n, locale) {
   if (i18n.mode === 'legacy') {
     i18n.global.locale = locale;
@@ -74,6 +88,7 @@ async function setDefaultLocale(locale, store) {
 
 export {
   loadLocaleMessages,
+  loadScopedLocaleMessages,
   setI18nLanguage,
   setupI18n,
   getDefaultLocale,
