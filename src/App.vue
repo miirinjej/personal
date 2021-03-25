@@ -1,5 +1,6 @@
 <template>
   <div class="l-container">
+    <router-view />
     <TheErrorHandler />
   </div>
 </template>
