@@ -1,0 +1,11 @@
+{
+  "title": "Page not found",
+  "callToAction": "Please use search or navigation.",
+  "description": "The page you're looking for is not available for one of the following reasons:",
+  "heading": "Whoops!",
+  "reasons": {
+    "incorrectLink": "The link to this page may be incorrect or out-of-date.",
+    "movedBookmark": "You may have bookmarked a page that has been moved.",
+    "unsupportedLanguage": "You have selected an unsupported language."
+  }
+}
