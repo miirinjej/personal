@@ -1,6 +1,6 @@
 {
   "name": "personal",
-  "version": "0.0.0",
+  "version": "0.20.0",
   "scripts": {
     "dev": "node server",
     "build": "npm run build:server && npm run build:client",
