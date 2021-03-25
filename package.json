@@ -2,9 +2,13 @@
   "name": "personal",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "dev": "node server",
+    "build": "npm run build:server && npm run build:client",
+    "prebuild:client": "rimraf dist/client",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "prebuild:server": "rimraf dist/server",
+    "build:server": "vite build --ssr src/server-entry.js --outDir dist/server",
+    "serve": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
     "core-js": "^3.9.1",
