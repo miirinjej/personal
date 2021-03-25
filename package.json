@@ -8,17 +8,20 @@
   },
   "dependencies": {
     "core-js": "^3.9.1",
-    "vue": "^3.0.7"
+    "vue": "^3.0.7",
+    "vue-i18n": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
+    "@intlify/vite-plugin-vue-i18n": "^2.0.4",
     "@miirinjej/eslint-config": "^1.5.0",
     "@miirinjej/eslint-config-vue": "^1.2.2",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
     "eslint": "^7.22.0",
-    "vite": "^2.1.2"
+    "vite": "^2.1.2",
+    "vite-plugin-i18n-resources": "^1.0.3"
   },
   "eslintConfig": {
     "extends": [
