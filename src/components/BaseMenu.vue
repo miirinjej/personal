@@ -24,12 +24,12 @@
         type: Array,
         required: true,
         validator(menuItems) {
-          for (let i = 0; i < menuItems.length; i += 1) {
-            if (typeof menuItems[i].name !== 'string') {
+          for (const menuItem of menuItems) {
+            if (typeof menuItem.name !== 'string') {
               return false;
             }
 
-            if (typeof menuItems[i].title !== 'string') {
+            if (typeof menuItem.title !== 'string') {
               return false;
             }
           }
