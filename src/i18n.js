@@ -17,7 +17,7 @@ async function loadLocaleMessages(i18n, locale, store) {
     i18n.global.setLocaleMessage(locale, messages.default);
   } catch (error) {
     if (!isServer) {
-      await store.dispatch('errors/setError', error);
+      store.dispatch('errors/setError', error);
     }
   }
 
@@ -31,7 +31,7 @@ async function loadScopedLocaleMessages(i18n, locale, scope, store) {
     i18n.setLocaleMessage(locale, messages.default);
   } catch (error) {
     if (!isServer) {
-      await store.dispatch('errors/setError', error);
+      store.dispatch('errors/setError', error);
     }
   }
 
@@ -78,11 +78,11 @@ function getDefaultLocale() {
   return import.meta.env.VITE_I18N_LOCALE || EN;
 }
 
-async function setDefaultLocale(locale, store) {
+function setDefaultLocale(locale, store) {
   try {
     localStorage.setItem('defaultLocale', locale);
   } catch (error) {
-    await store.dispatch('errors/setError', error);
+    store.dispatch('errors/setError', error);
   }
 }
 

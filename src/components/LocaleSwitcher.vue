@@ -47,8 +47,8 @@
         });
       });
 
-      onUpdated(async () => {
-        await setDefaultLocale(globalLocale.value, store);
+      onUpdated(() => {
+        setDefaultLocale(globalLocale.value, store);
       });
 
       return {

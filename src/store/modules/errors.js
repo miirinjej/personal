@@ -12,11 +12,11 @@ const state = () => ({
 });
 
 const actions = {
-  async [HANDLE_ERROR]({ commit }, error) {
-    commit(HANDLE_ERROR, await error);
+  [HANDLE_ERROR]({ commit }, error) {
+    commit(HANDLE_ERROR, error);
   },
-  async [SET_ERROR]({ commit }, error) {
-    commit(SET_ERROR, await error);
+  [SET_ERROR]({ commit }, error) {
+    commit(SET_ERROR, error);
   },
 };
 
